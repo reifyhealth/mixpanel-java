@@ -129,6 +129,10 @@ public class MixpanelAPI {
      */
     /* package */ boolean sendData(String dataString, String endpointUrl) throws IOException {
         URL endpoint = new URL(endpointUrl);
+        System.out.println("===================MIXPANEL AUDIT=====================");
+        System.out.println("URL: " + endpointUrl);
+        System.out.println("dataString: " +  dataString);
+        System.out.println("======================================================");
         URLConnection conn = endpoint.openConnection();
         conn.setReadTimeout(READ_TIMEOUT_MILLIS);
         conn.setConnectTimeout(CONNECT_TIMEOUT_MILLIS);
